@@ -1,0 +1,48 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>Последовательные динамические формы</title>
+    
+    <!-- Подключаем jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Последовательные формы</h2>
+        
+        <!-- Контейнер для форм -->
+        <div id="forms-container" class="forms-grid">
+            <div class="form-card active-form">
+                <h3>Форма №1</h3>
+                <form class="ajax-form" onsubmit="return false;">
+                    <div class="inputs-wrapper">
+                        <div class="input-group">
+                            <label>input_name:</label>
+                            <input type="text" name="input_name" placeholder="Введите значение" required>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button type="button" class="submit-btn">Отправить и расширить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ccc;">
+
+        <div class="viewer-section">
+            <button type="button" id="toggle-viewer-btn">Показать / Обновить данные JSON</button>
+            <div id="json-viewer" style="display: none; margin-top: 20px;">
+                <h3>Данные из базы (JSONB)</h3>
+                <div id="records-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем JS в конце body -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
