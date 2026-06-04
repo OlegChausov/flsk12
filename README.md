@@ -129,7 +129,12 @@ sudo apt install python3-pip python3-venv python3-dev postgresql postgresql-cont
    ```bash
    sudo ln -s /etc/nginx/sites-available/flaskapp /etc/nginx/sites-enabled/
    ```
-4. Проверьте конфигурацию Nginx на ошибки и перезапустите сервис:
+   
+4. Удалите дефолтную конфигурацию Nginx:
+```bash
+   sudo rm /etc/nginx/sites-enabled/default
+```
+5. Проверьте конфигурацию Nginx на ошибки и перезапустите сервис:
    ```bash
    sudo nginx -t
    sudo systemctl restart nginx
@@ -273,7 +278,12 @@ sudo apt install python3-pip python3-venv python3-dev postgresql postgresql-cont
 ```bash
    sudo ln -s /etc/nginx/sites-available/flaskapp /etc/nginx/sites-enabled/
 ```
-4. Test the Nginx configuration and restart the service:
+4. Remove the default Nginx configuration:
+```bash
+   sudo rm /etc/nginx/sites-enabled/default
+```
+
+5. Test the Nginx configuration and restart the service:
 ```bash
    sudo nginx -t
    sudo systemctl restart nginx
