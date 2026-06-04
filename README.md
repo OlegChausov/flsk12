@@ -28,6 +28,7 @@ sudo apt install python3-pip python3-venv python3-dev postgresql postgresql-cont
    ALTER ROLE tester SET default_transaction_isolation TO 'read committed';
    ALTER ROLE tester SET timezone TO 'UTC';
    GRANT ALL PRIVILEGES ON DATABASE dynamic_form_db TO tester;
+   GRANT ALL ON SCHEMA public TO tester;
    \q
    ```
 
@@ -171,6 +172,7 @@ sudo apt install python3-pip python3-venv python3-dev postgresql postgresql-cont
    ALTER ROLE tester SET default_transaction_isolation TO 'read committed';
    ALTER ROLE tester SET timezone TO 'UTC';
    GRANT ALL PRIVILEGES ON DATABASE dynamic_form_db TO tester;
+   GRANT ALL ON SCHEMA public TO tester;
    \q
 ```
 
